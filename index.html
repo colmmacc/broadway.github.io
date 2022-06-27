@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Broadway Musicals</title>
+		<style>
+
+		#first-bar {
+			background-color: #e40303;
+			min-height: 100px; 
+		}
+		#second-bar {
+			background-color: #ff8c00;
+			vertical-align: middle;
+			min-height: 100px; 
+			font-weight: bold;
+			font-size: 3em;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			color: #FFFFFF;
+		}
+		#second-bar p {
+			margin: 0;
+  			text-align: center;
+  			position: relative;
+  			top: 50%;
+  			-ms-transform: translateY(-50%);
+  			-webkit-transform: translateY(-50%);
+  			transform: translateY(-50%);
+		}
+
+		#third-bar {
+			background-color: #ffed00;
+			min-height: 100px; 
+			margin: 0;
+		}
+		#fourth-bar {
+			background-color: #008026;
+			min-height: 100px; 
+			font-size: 2.2em;
+			text-align: center;
+			vertical-align: bottom;
+			margin: 0;
+		}
+		#question-text {
+			background-color: #008026;
+
+		}
+		#fifth-bar {
+			background-color: #004dff;
+			min-height: 100px; 
+		}
+		#sixth-bar {
+			background-color: #750787;
+			vertical-align: middle;
+			min-height: 100px; 
+			font-size: 2.2em;
+			text-align: center;
+			margin: 0;
+			border: 0;
+		}
+
+		body {
+			font-family: Montserrat, helvetica, arial, sans-serif; 
+			font-size: 16x;
+			color: #ffffff;
+			background-color: #750787;
+			margin: 0;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 1.6em;
+			margin-top: 30px;
+		}
+		p {
+			line-height: 1.6em;
+		}
+
+		#header {
+			background-color: #0A3161;
+			color: #FFFFFF;
+			padding: 10px 0 10px 0;
+			font-size: 2.2em;
+		}
+
+		#question {
+			background-color: #B31942;
+			color: #FFFFFF;
+			padding: 10px 0 10px 0;
+			font-size: 2.2em;
+		}
+
+		#progress, #seperator {
+			background-color: #FFFFFF;
+			color: #0A3161;
+			padding: 10px 0 10px 0;
+			font-size: 2.2em;
+		}
+
+		#answer:focus {
+			outline: none;
+		}
+
+		#answer {
+			text-align: center;
+			border: 0;
+			background-color: #008026;
+			color: #FFFFFF;
+			font-size: 2.2em;
+		}
+
+		</style>
+
+	</head>
+	<body>
+		<div id="first-bar"></div>
+		<div id="second-bar"><p>How many Broadway Musicals can you name?</p></div>
+		<div id="third-bar"></div>
+		<div id="fourth-bar"><input type="text" id="answer" name="answer" autofocus/></div>
+		<div id="fifth-bar"></div>
+		<div id="sixth-bar"></div>
+
+		<script language="javascript">
+  let answers = [
+
+"3 for Tonight", "9 to 5", "13", "13 Daughters", "The 25th Annual Putnam County Spelling Bee", "42nd Street", "70, Girls, 70", "110 in the Shade", "1492 Up to Date", "1600 Pennsylvania Avenue", "1776", "The 1940's Radio Hour", "The Act", "The Addams Family", "Adele", "Adonis", "The Adventures of Tom Sawyer", "Afgar", "After Midnight", "Aida", "Ain't Misbehavin'", "Ain't Supposed to Die a Natural Death", "Ain't Too Proud", "Aladdin", "Alive and Kicking", "All American", "All Shook Up", "Allegiance", "Allegro", "Almost Famous", "Amazing Grace", "Ambassador", "Amélie", "Amen Corner", "America's Sweetheart", "American Dance Machine", "American Idiot", "American Psycho", "Americana", "Amour", "An American in Paris", "Anastasia", "Angel", "Angel in the Wings", "Animal Crackers", "Ankles Aweigh", "Anna Karenina", "Annie", "Annie Get Your Gun", "Anya", "Anyone Can Whistle", "Anything Goes", "Applause", "The Apple Tree", "Are You with It?", "Around the World", "As the Girls Go", "As Thousands Cheer", "Aspects of Love", "Assassins", "At Home Abroad", "Avenue Q", "Babes in Arms", "Babes in Toyland", "Baby", "Baby It's You!", "Bajour", "Baker Street", "Ballroom", "The Band Wagon", "The Band's Visit", "Bandanna Land", "Bandstand", "Banjo Eyes", "Barnum", "Baron Trenck", "Battling Buttler", "Be More Chill", "Beatlemania", "Beautiful", "Beauty and the Beast", "The Beauty Spot", "Beetlejuice", "Beg, Borrow or Steal", "Beggar's Holiday", "The Belle of Bohemia", "The Belle of Brittany", "The Belle of New York", "La Belle Paree", "Bells Are Ringing", "Ben Franklin in Paris", "Best Foot Forward", "The Best Little Whorehouse Goes Public", "The Best Little Whorehouse in Texas", "The Better 'Ole", "Between the Devil", "Big", "Big Boy", "Big Deal", "Big Fish", "Big River", "Billion Dollar Baby", "The Billy Barnes Revue", "Billy Elliot", "Black and Blue", "The Black Crook", "Blackbirds of 1928", "Blackbirds of 1933", "Blood Brothers", "Bloomer Girl", "Blue Monday", "The Blue Paradise", "Blues in the Night", "The Body Beautiful", "Bombay Dreams", "Bombo", "Bombshell", "Bonnie & Clyde", "The Book of Mormon", "The Boy Friend", "The Boy from Oz", "The Boys from Syracuse", "Bravo Giovanni", "Breakfast at Tiffany's", "The Bridges of Madison County", "Brigadoon", "Bright Lights of 1944", "Bright Star", "Bring Back Birdie", "Bring in 'da Noise, Bring in 'da Funk", "Bring It On", "A Broadway Musical", "A Bronx Tale", "Brooklyn", "Bubbling Brown Sugar", "Buddies", "Buddy: The Buddy Holly Story", "Bugs Bunny on Broadway", "Bullets Over Broadway", "The Bunch and Judy", "But Never Jam Today", "By Jeeves", "By Jupiter", "By the Beautiful Sea", "Bye Bye Birdie", "Cabaret", "Cabin in the Sky", "Cafe Crown", "La Cage aux Folles", "Call Me Madam", "Call Me Mister", "Calling All Stars", "Camelot", "Can-Can", "Candide", "Canterbury Tales", "The Capeman", "Carmelina", "Carmen Jones", "Carnival in Flanders", "Carnival!", "Caroline, or Change", "Carousel", "Carrie", "The Casino Girl", "Castles in the Air", "The Cat and the Fiddle", "Catch Me If You Can", "Catch My Soul", "A Catered Affair", "Cats", "Celebration", "Chaplin", "The Charlatan", "Charlie and Algernon", "Charlie and the Chocolate Factory", "Chee-Chee", "The Cher Show", "Chess", "Chicago", "Chita Rivera: The Dancer's Life", "Chitty Chitty Bang Bang", "The Chocolate Dandies", "A Chorus Line", "Christine", "A Christmas Story", "Chronicle of a Death Foretold", "Chu Chem", "Cinderella", "The City Chap", "City of Angels", "The Civil War", "A Class Act", "Clorindy: The Origin of the Cakewalk", "Coco", "The Cocoanuts", "The Color Purple", "Come Fly Away", "Come from Away", "Come Summer", "Company", "A Connecticut Yankee", "The Conquering Hero", "Contact", "Copperfield", "A Country Girl", "The Cradle Will Rock", "Crazy for You", "The Crinoline Girl", "Criss Cross", "Cry For Us All", "Cry-Baby", "Curtains", "Cyrano", "Dames at Sea", "Damn Yankees", "Dance a Little Closer", "Dance of the Vampires", "Dance with Me", "Dancin'", "Darling of the Day", "The Day Before Spring", "A Day in Hollywood / A Night in the Ukraine", "Dear Evan Hansen", "Dear World", "Dearest Enemy", "The Desert Song", "Destry Rides Again", "Dew Drop Inn", "Different Times", "Dirty Rotten Scoundrels", "Disaster!", "The District Leader", "Divine Lust", "Do Black Patent Leather Shoes Really Reflect Up?", "Do I Hear a Waltz?", "Do Re Mi", "Doctor Zhivago", "A Doll's Life", "Don't Bother Me, I Can't Cope", "Don't Play Us Cheap", "Don't Step on My Olive Branch", "Donnybrook!", "Doonesbury", "Rap Master Ronnie", "Dr. Seuss' How the Grinch Stole Christmas!", "Dracula", "Drat! The Cat!", "Dream", "The Dream Girl", "Dreamgirls", "Dreamtime", "Das Dreimäderlhaus", "The Drowsy Chaperone", "Du Barry Was a Lady", "Dude", "The Earl Carroll Vanities", "The Education of H*Y*M*A*N K*A*P*L*A*N", "Eileen", "Elf", "Escape to Margaritaville", "Eubie!", "An Evening with Jerry Herman", "Everybody's Welcome", "Everyday Rapture", "Evita", "Face the Music", "Fade Out – Fade In", "Falsettos", "A Family Affair", "Fanny", "The Fascinating Widow", "Fiddler on the Roof", "Fifty Million Frenchmen", "The Fig Leaves Are Falling", "Finian's Rainbow", "Fiorello!", "The Firebrand of Florence", "The Firefly", "First Date", "First Impressions", "The First", "Five Guys Named Moe", "The Five O'Clock Girl", "Flahooley", "Flora the Red Menace", "Florodora", "Flower Drum Song", "Flying Colors", "Flying High", "Flying Over Sunset", "Follies", "Follow the Girls", "Follow Thru", "Footloose", "The Fortune Teller", "Forty-five Minutes from Broadway", "Fosse", "Foxy", "Freestyle Love Supreme", "The Frogs", "From A to Z", "Frozen", "The Full Monty", "Fun Home", "Funny Face", "Funny Girl", "A Funny Thing Happened on the Way to the Forum", "Gantry", "The Garrick Gaieties", "Gay Divorce", "The Gay Life", "A Gentleman's Guide to Love and Murder", "Gentlemen Prefer Blondes", "George M!", "George White's Scandals", "Georgy", "Ghost", "Gigi", "Girl Crazy", "The Girl Friend", "The Girl from Nantucket", "The Gay Parisienne", "The Girl in Pink Tights", "The Girl in the Taxi", "The Girl Who Came to Supper", "Glory Days", "Godspell", "Going Up", "The Golden Apple", "Golden Boy", "Golden Rainbow", "Goldilocks", "Good News", "Good Times", "Good Vibrations", "The Goodbye Girl", "Goodtime Charley", "The Gospel at Colonus", "Got Tu Go Disco", "Grand Hotel", "A Grand Night for Singing", "The Grand Tour", "Grease", "The Great Waltz", "Greenwich Village Follies", "Greenwillow", "Grey Gardens", "Grind", "Groundhog Day", "Guys and Dolls", "Gypsy", "Hadestown", "Hair", "Hairspray", "Half a Sixpence", "Hallelujah, Baby!", "Hamilton", "Hands on a Hardbody", "The Happiest Girl in the World", "Happy Hunting", "Happy New Year", "The Happy Time", "Happy Town", "Harrigan 'N Hart", "Harry Delmar's Revels", "Hazel Flagg", "Head over Heels", "Heathers", "Hello, Dolly!", "Hellzapoppin", "Henry, Sweet Henry", "Her First Roman", "Hercules", "Here's Howe", "Here's Love", "Here's Where I Belong", "High Button Shoes", "High Fidelity", "High Jinks", "High Society", "High Spirits", "Higher and Higher", "Hit the Deck", "Hitchy-Koo", "Hitchy-Koo of 1919", "Hold Everything!", "Hold On to Your Hats", "Holiday Inn", "Holler If Ya Hear Me", "Hollywood Pinafore", "Home Sweet Homer", "Honeymoon in Vegas", "Hooray for What!", "Hot Feet", "The Hot Mikado", "Hot Spot", "The Hotel Mouse", "House of Flowers", "How Now, Dow Jones", "How to Succeed in Business Without Really Trying", "The Human Comedy", "I Can Get It for You Wholesale", "I Do! I Do!", "I Had a Ball", "I Love My Wife", "I Married an Angel", "I Remember Mama", "I'd Rather Be Right", "I'll Say She Is", "I'm Solomon", "If/Then", "Illya Darling", "In Dahomey", "In Gay New York", "In My Life", "In the Heights", "In Transit", "Into the Light", "Into the Woods", "Irene", "Irma La Douce", "Is There Life After High School?", "It Ain't Nothin' But the Blues", "It Shoulda Been You", "It's a Bird... It's a Plane... It's Superman", "Jackpot", "Jamaica", "James Joyce's The Dead", "Jane Eyre", "Jekyll & Hyde", "Jelly's Last Jam", "Jennie", "Jerome Robbins' Broadway", "Jerry's Girls", "Jersey Boys", "Jesus Christ Superstar", "Jimmy", "Jimmy Shine", "John Henry", "John Murray Anderson's Almanac", "Johnny Johnson", "Joseph and the Amazing Technicolor Dreamcoat", "A Joyful Noise", "Jubilee", "Jumbo", "Juno", "Just Because", "Kat and the Kings", "Katinka", "Kean", "Keep Off the Grass", "Kelly", "Kid Boots", "The King and I", "King David", "King Kong", "King of Hearts", "Kinky Boots", "Kismet", "Kiss Me, Kate", "Kiss of the Spider Woman", "Knickerbocker Holiday", "A Kurt Weill Cabaret", "Kwamina", "La La Lucille", "Lady in the Dark", "Lady, Be Good", "Laffing Room Only", "The Last Ship", "Late Nite Comic", "Leader of the Pack", "Leave It to Jane", "Leave It to Me!", "Legally Blonde", "Legs Diamond", "Lend an Ear", "Lennon", "Lestat", "Let 'Em Eat Cake", "Let It Ride", "Let My People Come", "Let's Face It!", "The Lieutenant", "Life Begins at 8:40", "The Life", "The Light in the Piazza", "Li'l Abner", "The Lion King", "The Little Blue Devil", "Little Jessie James", "Little Johnny Jones", "Little Me", "The Little Mermaid", "Little Nellie Kelly", "A Little Night Music", "The Little Prince and the Aviator", "Little Shop of Horrors", "The Little Show", "Little Women", "Lollipop", "The Look of Love", "Look to the Lilies", "Lorelei", "Lost in the Stars", "Lost, Strayed or Stolen", "Louisiana Purchase", "Love Life", "Love O' Mike", "Lovely Ladies, Kind Gentlemen", "LoveMusik", "Lucky Sambo", "Lute Song", "Lysistrata Jones", "Mack and Mabel", "The Madwoman of Central Park West", "Magdalena", "Maggie Flynn", "The Magic Show", "Make a Wish", "Make It Snappy", "Make Mine Manhattan", "Mame", "Mamma Mia!", "Man of La Mancha", "Man on the Moon", "Marie Christine", "Marinka", "Marlowe", "Marriage a la Carte", "Mary", "Mary Jane McKane", "Mary Poppins", "Mascherato", "Matilda", "May Wine", "Mayor", "Maytime", "Me and Bessie", "Me and Juliet", "Me and My Girl", "The Me Nobody Knows", "Mean Girls", "Meet Me in St. Louis", "Memphis", "Memphis Bound", "Merlin", "Merrily We Roll Along", "The Merry Monarch", "Metro", "Mexican Hayride", "Michael Todd's Peep Show", "The Midnight Sons", "Milk and Honey", "Million Dollar Quartet", "Minnie's Boys", "Les Misérables", "Miss 1917", "Miss Dolly Dollars", "Miss Liberty", "Miss Saigon", "MJ", "Mlle. Modiste", "Molly", "The Most Happy Fella", "Motown", "Movin' Out", "Mr. President", "Mr. Saturday Night", "Mr. Wonderful", "Mrs. Doubtfire", "Music Box Revue", "Music in the Air", "Music Is", "The Music Man", "Fine and Dandy", "My Darlin' Aida", "My Fair Lady", "My Favorite Year", "My Maryland", "My One and Only", "The Mystery of Edwin Drood", "Natasha, Pierre & The Great Comet of 1812", "Naughty Marietta", "Never Gonna Dance", "New Faces of 1952", "New Girl in Town", "The New Yorkers", "The News", "Newsies", "Next to Normal", "Nice Work If You Can Get It", "Nick & Nora", "The Night Boat", "A Night in Spain", "The Night That Made America Famous", "A Night with Janis Joplin", "Nine", "No Strings", "No, No, Nanette", "Of Thee I Sing", "Oh, Boy!", "Oh, Captain!", "Oh, Kay!", "Oh, Lady! Lady!!", "Oh, My Dear!", "Oh! Calcutta!", "Oh! Oh! Delphine", "Oklahoma!", "Oliver!", "On a Clear Day You Can See Forever", "On the Town", "On the Twentieth Century", "On Your Feet!", "On Your Toes", "Once", "Once on This Island", "Once Upon a Mattress", "One Mo' Time", "One Night Stand", "One Touch of Venus", "Onward Victoria", "Orange Blossoms", "Out of This World", "Over Here!", "Pacific Overtures", "Paint Your Wagon", "The Pajama Game", "Pal Joey", "Panama Hattie", "Panjandrum", "Parade", "Paradise Square", "Paramour", "Pardon My English", "Paris", "A Parisian Model", "Park Avenue", "A Party with Betty Comden and Adolph Green", "The Passing Show", "The Passing Show of 1916", "The Passing Show of 1918", "Passing Strange", "Passion", "Peggy-Ann", "The People in the Picture", "Peter Pan", "Peter Pan", "The Phantom of the Opera", "Pickwick", "The Pink Lady", "Pins and Needles", "Pipe Dream", "Pippin", "The Pirate Queen", "Plain and Fancy", "Platinum", "Play On!", "La Plume de Ma Tante", "Poor Little Ritz Girl", "Poppy", "Porgy and Bess", "Portofino", "Present Arms", "Pretty Woman", "Prince Ananias", "Prince of Broadway", "Prince of Central Park", "Princess Charming", "Princess Flavia", "The Princess Pat", "Priscilla, Queen of the Desert", "The Producers", "The Prom", "Promises, Promises", "Pump Boys and Dinettes", "Purlie", "Putting It Together", "Quilters", "Rachael Lily Rosenbloom", "Raggedy Ann", "Rags", "Ragtime", "Raisin", "Rang Tang", "The Red Mill", "The Red Shoes", "Red, Hot and Blue", "Redhead", "Rent", "Revenge with Music", "Rex", "Right This Way", "Ring of Fire", "The Rink", "Rio Rita", "Ripples", "The Roar of the Greasepaint – The Smell of the Crowd", "The Robber Bridegroom", "Roberta", "Robinson Crusoe, Jr.", "Rock 'N Roll! The First 5,000 Years", "Rock of Ages", "Rockabye Hamlet", "The Rocky Horror Show", "Rodgers + Hammerstein's Cinderella", "Romance/Romance", "Rosalie", "Rose-Marie", "The Rothschilds", "Rugantino", "Rumple", "Run, Little Chillun", "Runaways", "Sadie Thompson", "Sail Away", "Sally", "Sarafina!", "Saratoga", "Saturday Night Fever", "Scandalous: The Life and Trials of Aimee Semple McPherson", "Say When", "Say, Darling", "The Scarlet Pimpernel", "School of Rock", "The Scottsboro Boys", "Sea Legs", "The Second Little Show", "The Secret Garden", "See America First", "Seesaw", "The Serenade", "Set to Music", "Seussical", "Seven Brides for Seven Brothers", "Seventeen", "Shangri-La", "She Loves Me", "Shenandoah", "Sherry!", "Shinbone Alley", "Shōgun", "Show Boat", "Show Girl", "Show Me Where the Good Times Are", "Shrek", "Shuffle Along", "Side by Side by Sondheim", "Side Show", "Silk Stockings", "Simple Simon", "Simply Heavenly", "Sinbad", "Sing Street", "Singin' in the Rain", "The Siren", "Sister Act", "Six", "Skyscraper", "Smile", "Smiling Faces", "Smokey Joe's Cafe", "So Long, 174th Street", "Some Like It Hot", "Something for the Boys", "Something More!", "Something Rotten!", "Something's Afoot", "Sometime", "Sondheim on Sondheim", "Song and Dance", "Song of Norway", "Song of the Flame", "Sons o' Fun", "Soon", "Sophisticated Ladies", "Soul Doctor", "The Sound of Music", "South Pacific", "Spamalot", "Spider-Man: Turn Off the Dark", "SpongeBob SquarePants", "Spring Awakening", "St. Louis Woman", "Star and Garter", "Starlight Express", "Starmites", "State Fair", "Steel Pier", "Stepping Stones", "Stop the World – I Want to Get Off", "Stop! Look! Listen!", "The Story of My Life", "La Strada", "The Straw Hat Revue", "Street Scene", "The Streets of Paris", "Strike Up the Band", "A Stubborn Cinderella", "Subways Are for Sleeping", "Sugar", "Sugar Babies", "Summer", "Sunday in the Park with George", "Sunny", "Sunset Boulevard", "Sweeney Todd: The Demon Barber of Fleet Street", "Sweet Adeline", "Sweet and Low", "Sweet Charity", "Sweet Smell of Success", "Sweethearts", "Swing!", "Swinging on a Star", "Taboo", "Take a Chance", "Take Me Along", "A Tale of Two Cities", "Tambourines to Glory", "Tangerine", "The Tap Dance Kid", "Tarzan", "Teddy & Alice", "The Telephone Girl", "Tell Me on a Sunday", "Tenderloin", "The Follies of 1907", "The Little Prince", "They're Playing Our Song", "This Is The Army", "This Year of Grace", "Thoroughly Modern Millie", "Thou Shalt Not", "Three Cheers", "The Three Musketeers", "Three Wishes for Jamie", "Three's a Crowd", "The Threepenny Opera", "Thumbs Up!", "Tickle Me", "Timbuktu!", "A Time for Singing", "The Times They Are a-Changin'", "Tintypes", "Tip-Toes", "Titanic", "Title of show", "To-Night's the Night", "Too Many Girls", "Top Banana", "Tovarich", "Town Topics", "Treasure Girl", "A Tree Grows in Brooklyn", "A Trip to Chinatown", "Triumph of Love", "Tuck Everlasting", "Two by Two", "Two for the Show", "Two Gentlemen of Verona", "Two Little Girls in Blue", "Two on the Aisle", "Two's Company", "The Unsinkable Molly Brown", "Up in Central Park", "Uptown... It's Hot!", "Urban Cowboy", "Urinetown", "The Utter Glory of Morrissey Hall", "The Vagabond King", "The Vamp", "Vera Violetta", "Very Good Eddie", "Very Warm for May", "Via Galactica", "Victor/Victoria", "Violet", "Virginia", "Wait a Minim!", "Waitress", "Wake Up and Dream", "Walk a Little Faster", "Walking Happy", "War Paint", "Watch Your Step", "The Wedding Singer", "Welcome to the Club", "The Well of Romance", "West Side Story", "What Makes Sammy Run?", "What's Up?", "Where's Charley?", "The Whirl of New York", "The Whirl of Society", "White Christmas", "White Horse Inn", "The White Horse Inn", "The Who's Tommy", "Whoop-Dee-Doo", "Whoop-Up", "Whoopee!", "Wicked", "The Widow Jones", "The Wild Party", "Wildcat", "Wildflower", "The Will Rogers Follies", "Wish You Were Here", "The Wiz", "The Wizard of the Nile", "The Woman in White", "Woman of the Year", "Women on the Verge of a Nervous Breakdown", "A Wonderful Life", "Wonderful Town", "Working", "Xanadu", "A Year with Frog and Toad", "Yip Yip Yaphank", "You Never Know", "You Said It", "You're a Good Man, Charlie Brown", "Young Frankenstein", "Your Arms Too Short to Box with God", "Ziegfeld Follies", "Ziegfeld Follies of 1919", "Ziegfeld Follies of 1936", "Zorba", "The Zulu and the Zayda" 
+	];
+
+  let found = [ ];
+
+  function results() {
+    var resultsHTML="<p>";
+
+    var count = found.length;
+    for (const result of found.reverse()) {
+	resultsHTML = resultsHTML + count + ". " + result + "<br/>";	
+	count -= 1;
+    } 
+
+    resultsHTML += "</p>";
+
+    document.getElementById('sixth-bar').innerHTML = resultsHTML; 
+  }
+
+  function sanitize(str) {
+	// Map é, ä, ō to their ascii equivalents so that either version is accepted
+	// Remove all non-alphanumeric characters to ignore spacing and puncuation
+	return str.toLowerCase().replace('é', 'e').replace('ä', 'a').replace('ō', 'o').replace(/[^a-z0-9]/gi, '');
+  }
+
+  function advance() {
+    var userInput = sanitize(document.getElementById("answer").value);
+
+    var result = answers.find(
+    	function(str) {
+        	return sanitize(str) == userInput;
+    	}
+    );
+
+    if (!result) {
+	return;
+    }
+
+    var alreadyFound = found.find(
+    	function(str) {
+        	return str == result;
+    	}
+    );
+
+    if (alreadyFound) {
+	return;
+    }
+
+    found.push(result);
+
+    document.getElementById("answer").value = '';
+  
+    results();
+  }
+
+  const input = document.querySelector('input');
+  input.addEventListener('input', advance);
+		</script>
+	</body>
+</html>
